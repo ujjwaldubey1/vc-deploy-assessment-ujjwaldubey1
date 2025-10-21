@@ -129,6 +129,13 @@ export default function Home() {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
+
+      {/* Debug: Show modal state */}
+      {isModalOpen && (
+        <div className="fixed top-4 left-4 bg-red-500 text-white p-2 rounded z-50">
+          Modal is open!
+        </div>
+      )}
     </div>
   );
 }

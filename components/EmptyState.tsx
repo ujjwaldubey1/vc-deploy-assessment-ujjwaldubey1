@@ -88,7 +88,7 @@ export function EmptyState() {
         transition={{ delay: 0.7, duration: 0.6 }}
       >
         <Sparkles className="w-4 h-4" />
-        <span className="text-sm">Let's make things happen!</span>
+        <span className="text-sm">Let&apos;s make things happen!</span>
         <Sparkles className="w-4 h-4" />
       </motion.div>
     </motion.div>
