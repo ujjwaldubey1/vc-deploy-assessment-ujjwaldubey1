@@ -10,9 +10,12 @@ export const metadata: Metadata = {
   title: 'Modern Todo App',
   description: 'A beautiful, modern todo application with dark theme and smooth animations',
   icons: {
-    icon: '/api/favicon',
-    shortcut: '/api/favicon',
-    apple: '/api/favicon',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.jpeg', type: 'image/jpeg' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.jpeg',
   },
 }
 
