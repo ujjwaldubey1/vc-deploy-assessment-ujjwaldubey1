@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckSquare, Sparkles } from 'lucide-react';
+import { CheckSquare, Sparkles, Plus } from 'lucide-react';
 
 export function EmptyState() {
   return (
