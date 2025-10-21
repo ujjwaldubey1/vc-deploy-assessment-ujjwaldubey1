@@ -7,7 +7,7 @@ import { CheckSquare, Sparkles, Plus } from 'lucide-react';
 export function EmptyState() {
   return (
     <motion.div
-      className="flex flex-col items-center justify-center py-16 px-8 text-center"
+      className="flex flex-col items-center justify-center py-12 sm:py-16 px-6 sm:px-8 text-center"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -24,11 +24,11 @@ export function EmptyState() {
         }}
       >
         <div className="
-          w-24 h-24 rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20
+          w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20
           flex items-center justify-center backdrop-blur-sm border border-indigo-500/30
-          shadow-2xl shadow-indigo-500/20
+          shadow-xl sm:shadow-2xl shadow-indigo-500/20
         ">
-          <CheckSquare className="w-12 h-12 text-indigo-400" />
+          <CheckSquare className="w-10 h-10 sm:w-12 sm:h-12 text-indigo-400" />
         </div>
         
         {/* Floating sparkles */}
@@ -56,7 +56,7 @@ export function EmptyState() {
       </motion.div>
 
       <motion.h3
-        className="text-2xl font-bold text-slate-200 mb-4"
+        className="text-xl sm:text-2xl font-bold text-slate-200 mb-3 sm:mb-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.6 }}
@@ -65,7 +65,7 @@ export function EmptyState() {
       </motion.h3>
       
       <motion.p
-        className="text-slate-400 text-lg max-w-md leading-relaxed"
+        className="text-slate-400 text-base sm:text-lg max-w-md leading-relaxed"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.6 }}

@@ -11,20 +11,21 @@ interface FloatingAddButtonProps {
 
 export function FloatingAddButton({ onClick }: FloatingAddButtonProps) {
   return (
-    <div className="fixed bottom-8 right-8 z-50">
+    <div className="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-50">
       <Button
         onClick={onClick}
-        size="lg"
+        size="icon"
         className="
-          w-16 h-16 rounded-full
+          h-14 w-14 sm:h-16 sm:w-16 rounded-full
           bg-gradient-to-r from-indigo-500 to-purple-500
           hover:from-indigo-600 hover:to-purple-600
-          shadow-2xl shadow-indigo-500/30
+          shadow-xl sm:shadow-2xl shadow-indigo-500/30
           border-0 transition-all duration-300
-          group
+          active:scale-95
         "
+        aria-label="Add todo"
       >
-        <Plus className="w-8 h-8 text-white" />
+        <Plus className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
       </Button>
     </div>
   );
