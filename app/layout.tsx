@@ -9,6 +9,11 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Modern Todo App',
   description: 'A beautiful, modern todo application with dark theme and smooth animations',
+  icons: {
+    icon: '/api/favicon',
+    shortcut: '/api/favicon',
+    apple: '/api/favicon',
+  },
 }
 
 export default function RootLayout({
