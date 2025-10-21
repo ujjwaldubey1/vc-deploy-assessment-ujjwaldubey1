@@ -62,13 +62,13 @@ export function TodoCard({ todo }: TodoCardProps) {
       <Card className={`
         group relative overflow-hidden transition-all duration-300 ease-in-out
         ${todo.completed 
-          ? 'bg-gradient-to-br from-emerald-900/20 to-teal-900/20 border-emerald-500/30' 
-          : 'bg-gradient-to-br from-slate-800/50 to-slate-900/50 border-slate-700/50'
+          ? 'bg-gradient-to-br from-emerald-900/40 to-teal-900/40 border-emerald-500/40' 
+          : 'bg-slate-900/70 border-slate-700/70'
         }
-        hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10
-        backdrop-blur-sm border-2
+        hover:border-indigo-400/60 hover:shadow-[0_0_0_1px_rgba(99,102,241,0.35),0_12px_40px_rgba(99,102,241,0.15)]
+        backdrop-blur-md border
       `}>
-        <div className="p-4 flex items-center gap-3">
+        <div className="p-3 sm:p-4 flex items-center gap-2 sm:gap-3">
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -94,14 +94,14 @@ export function TodoCard({ todo }: TodoCardProps) {
                 onBlur={handleEdit}
                 autoFocus
                 className="
-                  bg-transparent border-none p-0 text-slate-100 placeholder:text-slate-400
+                  bg-transparent border-none p-0 text-slate-100 placeholder:text-slate-400 text-base sm:text-lg
                   focus:ring-0 focus:border-none focus:outline-none
                 "
               />
             ) : (
               <motion.p
                 className={`
-                  text-slate-100 transition-all duration-300 ease-in-out
+                  text-slate-100 transition-all duration-300 ease-in-out text-base sm:text-lg
                   ${todo.completed 
                     ? 'line-through text-slate-400 opacity-70' 
                     : 'text-slate-100'
@@ -118,7 +118,7 @@ export function TodoCard({ todo }: TodoCardProps) {
             )}
           </div>
 
-          <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="flex items-center gap-1 sm:gap-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
             {!isEditing ? (
               <>
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
@@ -127,8 +127,8 @@ export function TodoCard({ todo }: TodoCardProps) {
                     size="sm"
                     onClick={() => setIsEditing(true)}
                     className="
-                      h-8 w-8 p-0 text-slate-400 hover:text-indigo-400
-                      hover:bg-indigo-500/20 transition-all duration-300
+                      h-8 w-8 p-0 text-slate-300 hover:text-indigo-300
+                      hover:bg-indigo-500/15 transition-all duration-300
                     "
                   >
                     <Edit2 className="h-4 w-4" />
@@ -140,8 +140,8 @@ export function TodoCard({ todo }: TodoCardProps) {
                     size="sm"
                     onClick={handleDelete}
                     className="
-                      h-8 w-8 p-0 text-slate-400 hover:text-red-400
-                      hover:bg-red-500/20 transition-all duration-300
+                      h-8 w-8 p-0 text-slate-300 hover:text-red-300
+                      hover:bg-red-500/15 transition-all duration-300
                     "
                   >
                     <Trash2 className="h-4 w-4" />
@@ -156,8 +156,8 @@ export function TodoCard({ todo }: TodoCardProps) {
                     size="sm"
                     onClick={handleEdit}
                     className="
-                      h-8 w-8 p-0 text-emerald-400 hover:text-emerald-300
-                      hover:bg-emerald-500/20 transition-all duration-300
+                      h-8 w-8 p-0 text-emerald-300 hover:text-emerald-200
+                      hover:bg-emerald-500/15 transition-all duration-300
                     "
                   >
                     <Check className="h-4 w-4" />
@@ -169,8 +169,8 @@ export function TodoCard({ todo }: TodoCardProps) {
                     size="sm"
                     onClick={handleCancelEdit}
                     className="
-                      h-8 w-8 p-0 text-red-400 hover:text-red-300
-                      hover:bg-red-500/20 transition-all duration-300
+                      h-8 w-8 p-0 text-red-300 hover:text-red-200
+                      hover:bg-red-500/15 transition-all duration-300
                     "
                   >
                     <X className="h-4 w-4" />
@@ -186,8 +186,8 @@ export function TodoCard({ todo }: TodoCardProps) {
           absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100
           transition-opacity duration-500 ease-in-out pointer-events-none
           ${todo.completed 
-            ? 'bg-gradient-to-r from-emerald-500/5 to-teal-500/5' 
-            : 'bg-gradient-to-r from-indigo-500/5 to-purple-500/5'
+            ? 'bg-gradient-to-r from-emerald-400/10 to-teal-400/10' 
+            : 'bg-gradient-to-r from-indigo-400/10 to-purple-400/10'
           }
         `} />
       </Card>

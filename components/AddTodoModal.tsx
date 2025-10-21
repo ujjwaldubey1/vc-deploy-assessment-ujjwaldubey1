@@ -19,6 +19,7 @@ export function AddTodoModal({ isOpen, onClose }: AddTodoModalProps) {
   const { dispatch } = useTodos();
   const { toast } = useToast();
 
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (text.trim()) {
